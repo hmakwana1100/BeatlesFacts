@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FunFacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKk-6v-sdB">
+                                <rect key="frame" x="60" y="582" width="255" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="V7C-P0-Z6f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Click for more facts">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="StU-Jc-zBa"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beatles_with_the_beatles_stereo_front1" translatesAutoresizingMaskIntoConstraints="NO" id="Bir-eM-b77">
+                                <rect key="frame" x="0.0" y="10" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="SrQ-lk-rk2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beatle Facts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WH-5J-T1S">
+                                <rect key="frame" x="50" y="310" width="275" height="262"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bir-eM-b77" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="1hr-Id-f4z"/>
+                            <constraint firstItem="EKk-6v-sdB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="5k0-Va-FKq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EKk-6v-sdB" secondAttribute="trailing" constant="44" id="BtF-OX-5ff"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1WH-5J-T1S" secondAttribute="trailing" constant="34" id="HWF-lA-zKT"/>
+                            <constraint firstAttribute="trailing" secondItem="Bir-eM-b77" secondAttribute="trailing" id="Mb2-CC-Ci1"/>
+                            <constraint firstItem="1WH-5J-T1S" firstAttribute="top" secondItem="Bir-eM-b77" secondAttribute="bottom" id="VuQ-eT-bXz"/>
+                            <constraint firstItem="1WH-5J-T1S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="Xqw-Ii-4sV"/>
+                            <constraint firstItem="Bir-eM-b77" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b2n-gr-MbH"/>
+                            <constraint firstItem="EKk-6v-sdB" firstAttribute="top" secondItem="1WH-5J-T1S" secondAttribute="bottom" constant="10" id="kCz-CQ-RsX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EKk-6v-sdB" secondAttribute="bottom" constant="35" id="kvH-e4-Aze"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="funFactsButton" destination="EKk-6v-sdB" id="SHj-SN-CRR"/>
+                        <outlet property="funFactsLabel" destination="1WH-5J-T1S" id="R79-6a-2kY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="beatles_with_the_beatles_stereo_front1" width="1386" height="1141"/>
+    </resources>
+</document>
